@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Rae Crusoe 
+        CSC102-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAT Space Page</title>
+    <script src="code.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body{
+            background-color: blue;
+            color: white;
+        }
+        p{
+            font-size: 14pt;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a class="active" href="spacepage.html">Space Page</a>
+        <a href="space_data.html">Space Data</a>
+        <a href="carousel.html">Image Carousel</a>
+        <a href="boards.html">Boards</a>
+      </div>
+    <!-- This is the page title. There should be only 1 <h1> tag on a webpage. -->
+    <h1>UAT Space Page</h1>
+
+    <img src="UATspaceLogo.jpg" alt="UAT Space Logo" />
+    <br/>
+    <!-- This is a paragraph tag. Page text can go here. -->
+    <p>This is a test of the paragraph tags.</p>
+
+    <!-- This is a button. There is a JavaScript alert that show when the button 
+         is clicked. -->
+    <input type="button" Value="Click Me" onclick="alert('You clicked me');" />
+
+    <p>
+        Welcome, <span id="userNameBadge"></span>
+    </p>
+
+    <!--This will show the current countdown number-->
+    <p>
+        Countdown: <span id="countdown"></span>
+    </p>
+
+    <button type="button" onclick="startButtonClick();" id="btnStart">Start Countdown</button>
+    <button type="button" onclick="stopButtonClick();" id="btnStop" disabled="true">Stop Countdown</button>
+
+    <script>
+        //var userInfo = getUserInput();
+        //document.getElementById("userNameBadge").innerHTML = userInfo;
+
+       playSound("us-lab-background.mp3");
+    </script>
+
+    <audio controls>
+        <source src="us-lab-background.mp3" type="audio/mpeg">
+        Your browser doesn't support audio.
+    </audio>
+    <center></center>
+</body>
+</html>

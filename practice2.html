@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Practice</title>
+    <script>
+        function buttonClicked(){
+            alert("You clicked the button.");
+        }
+
+        function runCalculator(){
+            var num1 = 0;
+            var num2 = 0;
+
+            do{
+                num1 = prompt("Please enter number 1: ");                
+            }while (isNaN(num1));
+
+            do{
+                num2 = prompt("Please enter number 2: ");            
+            }while (isNaN(num2));
+           
+            var total = parseInt(num1) + parseInt(num2);
+            var product = num1 * num2;
+
+            alert("The total of " + num1 + " plus " + num2 + " is " + total);
+            alert("The product of " + num1 + " times " + num2 + " is " + product);
+        }
+    </script>
+</head>
+<body>
+    <h1>This page is going to show event handling.</h1>
+
+    <button type="button" onclick="runCalculator();">Launch Calculator</button>
+
+    <button type="button" onclick="buttonClicked();">Click Here</button>
+</body>
+</html>

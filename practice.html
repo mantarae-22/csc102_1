@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var first_name = "Rae";
+        var last_name = "Crusoe";
+        var pet = "";
+
+        //pet = prompt("Please enter your pet's name: ");
+
+        //alert("Your name " + first_name + " " + last_name + ". Your pet is: " + pet);
+    
+        /*
+          this function adds 2 numbers and returns the sum
+          number1 and number2 are the parameters that are passed in from the code
+          that called this function
+        */
+        function add_numbers(number1, number2){
+            //add the numbers together
+            var sum = number1 + number2;
+            //return the sum to the code that called this function
+            return sum;
+        }
+
+        /*
+            this function multiplies 2 number and returns the product to the 
+            code that called the function
+        */
+        function multiply_numbers(number1, number2){
+            //product will hold the result of number1 and number2 being multiplied together
+            var product = number1 * number2;
+            //return the product to the code that called this function
+            return product;
+        }
+
+        function checkForNumber(checkThisNumber){
+             //if the input is not a number, alert the user
+             if (!Number.isInteger(checkThisNumber)){
+                alert("Please enter a number.");
+                return false;
+            }
+            else{
+                //the user has entered a number and we can exit the loop
+                return true;
+            }
+        }
+
+        //get a number from the user and convert it to integer (whole number)
+        var num1 = 0;
+        var isValidInput = true;
+
+        //this loop will run at least 1 time to get the input
+        //it will run until the user enters a number
+        do{
+            //get a number from the user
+            num1 = parseInt(prompt("Enter number 1: "));
+
+            isValidInput = checkForNumber(num1);
+        }while(!isValidInput); //this loop wil run until the user enters a number
+
+        //get another number from the user and convert it to integer (whole number)
+        var num2 = 0;
+
+        do{
+            //get a number from the user
+            num2 = parseInt(prompt("Enter number 2: "))
+
+            isValidInput = checkForNumber(num2);
+        }while(!isValidInput); //this loop wil run until the user enters a number
+
+        // set the total variable equal to the value returned from the 
+        // add_numbers function; pass in the numbers that the user input
+        var total = add_numbers(num1, num2);
+
+        // set the product variable equal to the value returned from the 
+        // multiply_numbers function; pass in the numbers that the user input
+        var product = multiply_numbers(num1, num2);
+
+        //show the total in a JavaScript alert
+        alert("The total is: " + total);
+        //show the product in a JavaScript alert
+        alert("The product is: " + product);
+
+        if(total < product){
+            alert("The total " + total + " is less than the product " + product);
+        }
+        else if(total > product){
+            alert("The total " + total + " is greater than the product " + product);
+        }
+
+        var isLunchTime = false;
+        var currentTime = 11;
+
+        if (currentTime > 11){
+            isLunchTime = true;
+        }
+
+        if (isLunchTime == true){
+            alert("It is lunch time.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

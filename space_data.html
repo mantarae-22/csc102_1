@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAT Space Data</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="dataLauncher.js"></script>
+    <script src="dataLoader.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="spacepage.html">Space Page</a>
+        <a class="active" href="space_data.html">Space Data</a>
+        <a href="carousel.html">Image Carousel</a>
+        <a href="boards.html">Boards</a>
+      </div>
+    <script>
+        var index = 0;
+        var data = getData();
+    </script>
+
+    <h1>UAT Space Program Data</h1>
+    <img src="UAT_Space.jpg" width="200px">
+    <br>
+    The current time is: <span id="timeStamp">Press start for current time.</span>
+    <br>
+    <button id="startButton" onclick="start();">Start</button>
+    <button id="stopButton" onclick="stop();">Stop</button>
+    <br>
+    <table id="data">
+        <thead>
+            <th>Data type</th>
+            <th>Reading</th>
+        </thead>
+        <tbody>
+            <tr id="seconds_data">
+                <td>Time elapsed:</td>
+                <td>1210 seconds</td>
+            </tr>
+            <tr id="latitude">
+                <td>Latitude</td>
+                <td>0</td>
+            </tr>
+            <tr id="longitude">
+                <td>Longitude</td>
+                <td>0</td>
+            </tr>
+            <tr id="gpsSensor_alt">
+                <td>GPS Altitude</td>
+                <td>0</td>
+            </tr>
+            <tr id="bmpSensor_alt">
+                <td>BMP Sensor Altitude</td>
+                <td>30383</td>
+            </tr>
+            <tr id="bmpSensor_pres">
+                <td>BMP Sensor Pressure</td>
+                <td>2.34</td>
+            </tr>
+            <tr id="bmpSensor_temp">
+                <td>BMP Sensor Temperature</td>
+                <td>0</td>
+            </tr>
+            <tr id="digSensor_temp">
+                <td>Digital Sensor Temperature</td>
+                <td>24</td>
+            </tr>
+            <tr id="cssSensor_temp">
+                <td>CSS Sensor Temperature</td>
+                <td>32</td>
+            </tr>
+            <tr id="cssSensor_eco2">
+                <td>CSS Sensor eCO2</td>
+                <td>422</td>
+            </tr>
+            <tr id="cssSensor_TVOC">
+                <td>CSS Sensor TVOC</td>
+                <td>3</td>
+            </tr>
+            <tr id="UV">
+                <td>UV</td>
+                <td>6</td>
+            </tr>
+            <tr id="accelX">
+                <td>Accel X</td>
+                <td>-0.75</td>
+            </tr>
+            <tr id="accelY">
+                <td>Accel Y</td>
+                <td>-0.77</td>
+            </tr>
+            <tr id="accelZ">
+                <td>Accel Z</td>
+                <td>9.35</td>
+            </tr>
+            <tr id="magneticX">
+                <td>Magnetic X</td>
+                <td>-0.08</td>
+            </tr>
+            <tr id="magneticY">
+                <td>Magnetic Y</td>
+                <td>0.36</td>
+            </tr>
+            <tr id="magneticZ">
+                <td>Magnetic Z</td>
+                <td>-0.53</td>
+            </tr>
+            <tr id="gyroX">
+                <td>Gyro X</td>
+                <td>4.44</td>
+            </tr>
+            <tr id="gyroY">
+                <td>Gyro Y</td>
+                <td>-0.95</td>
+            </tr>
+            <tr id="gyroZ">
+                <td>Gyro Z</td>
+                <td>1.72</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+
+</body>
+</html>
